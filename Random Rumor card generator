@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int x;
+    char buffer[42];
+    const char *weapons[] = {"Knife", "Candlestick", "Pistol", "Poison", "Trophy", "Rope", "Bat", "Ax", "Dumbell"};
+    const char *guests[] = {"Mustard", "Plum", "Green", "Peacock", "Scarlet", "White"};
+    const char *rooms[] = {"Hall", "Dining Room", "Kitchen", "Patio", "Observatory", "Theater", "Living Room", "Spa", "Guest House"};
+    
+    srand(time(NULL));
+    
+    char *w1=weapons[rand() % (sizeof(weapons) / sizeof(weapons[0]))];
+    char *g1=guests[rand() % (sizeof(guests) / sizeof(guests[0]))];
+    char *r1=rooms[rand() % (sizeof(rooms) / sizeof(rooms[0]))];
+    
+    printf("Enter a random key to see your cards.");
+    scanf("%41s", buffer);
+    printf("Your weapon card is %s\n", w1);
+    printf("Your guest card is %s\n", g1);
+    printf("Your room card is %s\n", r1);
+    
+    //code for randomization. need to figure out how to make it so this loops for the player amount, without duplicates
+    
+    system("pause");
+    return 0;
+}
