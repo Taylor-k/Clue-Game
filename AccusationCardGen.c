@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-int rand_int(int a, int b);
 void cardnames(int weapon, int guest, int room);
 int main(void)
 {
